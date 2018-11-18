@@ -1,10 +1,10 @@
 CC = g++-7
-CC_FLAGS = -g -std=c++17 -w -Wall -Wextra -pedantic-errors -m32
+CC_FLAGS = -g -std=c++17 -w -Wall -Wextra -pedantic-errors
 
 EXEC = ahx2wav
 SOURCES = $(wildcard *.cpp)
 OBJECTS = $(SOURCES:.cpp=.o)
-LDFLAGS = -lm -ldl -lstdc++fs -L. -I. -m32
+LDFLAGS = -lm -ldl -lstdc++fs -L. -I.
 
 $(EXEC): $(OBJECTS)
 	$(CC) $(OBJECTS) $(LDFLAGS) -o $(EXEC)
